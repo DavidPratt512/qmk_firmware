@@ -14,3 +14,14 @@ Other keyboard configs are kept on other branches (in parentheses):
 
 I'm using different branches to effectively pin the version of qmk each board
 is built with.
+
+## Planck
+
+This is the branch for my **planck** configuration. The keymap is in the
+`keyboards/planck/keymaps/davidpratt512` directory.
+
+Make the firmware with
+
+```sh
+make planck/rev6:davidpratt512[:flash]
+```
