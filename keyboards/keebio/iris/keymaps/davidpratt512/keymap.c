@@ -148,23 +148,23 @@ combo_t key_combos[] = {
 /* --------------------------------- Key Overrides --------------------------------- */
 
 const key_override_t comma_paren_override = ko_make_with_layers(
-    MOD_MASK_SHIFT,  /* When shift is active            */
-    KC_COMM,         /* and KC_COMM is pressed          */
-    KC_LPRN,         /* replace the result with KC_LPRN */
-    1 << L_QWERTY    /* on these layers                 */
+    MOD_MASK_SHIFT,  /* When shift is active   */
+    KC_COMM,         /* and KC_COMM is pressed */
+    KC_LPRN,         /* send KC_LPRN           */
+    1 << L_QWERTY    /* only on these layers   */
 );
 
 const key_override_t dot_paren_override = ko_make_with_layers(
-    MOD_MASK_SHIFT,  /* When shift is active            */
-    KC_DOT,          /* and KC_DOT is pressed           */
-    KC_RPRN,         /* replace the result with KC_RPRN */
-    1 << L_QWERTY    /* on these layers                 */
+    MOD_MASK_SHIFT,  /* When shift is active  */
+    KC_DOT,          /* and KC_DOT is pressed */
+    KC_RPRN,         /* send KC_RPRN          */
+    1 << L_QWERTY    /* only on these layers  */
 );
 
 const key_override_t colon_semicolon_override = ko_make_basic(
-    MOD_MASK_SHIFT,  /* When shift is active            */
-    KC_COLN,         /* and KC_COLN is pressed          */
-    KC_SCLN          /* replace the result with KC_SCLN */
+    MOD_MASK_SHIFT,  /* When shift is active   */
+    KC_COLN,         /* and KC_COLN is pressed */
+    KC_SCLN          /* send KC_SCLN           */
 );
 
 const key_override_t **key_overrides = (const key_override_t *[]) {
