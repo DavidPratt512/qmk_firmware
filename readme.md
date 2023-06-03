@@ -9,7 +9,7 @@ Other keyboard configs are kept on other branches (in parentheses):
 * kbdfans/niu_mini (niu_mini)
 * **keebio/iris** (iris)
 * pauperboards/brick (brick)
-* **planck** (planck)
+* planck (planck)
 
 I'm using different branches to effectively pin the version of qmk each board
 is built with.
