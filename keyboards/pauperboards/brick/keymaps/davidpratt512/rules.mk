@@ -1,0 +1,4 @@
+COMBO_ENABLE = yes
+DEBOUNCE_TYPE = sym_defer_pk
+KEY_OVERRIDE_ENABLE = yes
+TAP_DANCE_ENABLE = no
