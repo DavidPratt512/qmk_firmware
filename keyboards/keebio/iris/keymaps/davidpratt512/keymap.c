@@ -23,8 +23,10 @@ uint16_t COMBO_LEN = COMBO_LENGTH;
 #define LWR_ENT LT(L_LOWER, KC_ENT)   /* Tap for enter, hold for L_LOWER             */
 #define RAIS_BS LT(L_RAISE, KC_BSPC)  /* Tap for bksp, hold for L_RAISE              */
 #define ESC_NUM LT(L_NUMPAD, KC_ESC)  /* Tap for esc, hold for L_NUMPAD              */
-#define GNME_LF G(S(KC_PGUP))         /* Shift window to prev workspace (gnome)      */
-#define GNME_RT G(S(KC_PGDN))         /* Shift window to next workspace (gnome)      */
+#define GNME_LF G(KC_PGUP)            /* (gnome) Move to prev workspace              */
+#define GNME_RT G(KC_PGDN)            /* (gnome) Move to next workspace              */
+#define GNME_ML G(S(KC_PGUP))         /* (gnome) Move window to prev workspace       */
+#define GNME_MR G(S(KC_PGDN))         /* (gnome) Move window to next workspace       */
 #define DF_QWER DF(L_QWERTY)          /* Set default layer to L_QWERTY               */
 #define TERM_CP C(S(KC_C))            /* Terminal copy (ctrl + shift + c)            */
 #define TERM_PT C(S(KC_V))            /* Terminal paste (ctrl + shift + v)           */
@@ -84,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      _______, G(KC_1), G(KC_2), G(KC_3), G(KC_4), G(KC_5),                            G(KC_6), G(KC_7), G(KC_8), G(KC_9), _______, QK_BOOT,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  _______,                            _______, GNME_LF, GNME_RT, _______, _______, _______,
+     _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  _______,                            GNME_ML, GNME_LF, GNME_RT, GNME_MR, _______, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      _______, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, _______,                            KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
