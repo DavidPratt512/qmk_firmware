@@ -13,3 +13,14 @@ Other keyboard configs are kept on other branches (in parentheses):
 
 I'm using different branches to effectively pin the version of qmk each board
 is built with.
+
+## Iris
+
+This is the branch for my **keebio/iris** configuration. The keymap is in the
+`keyboards/keebio/iris/keymaps/davidpratt512` directory.
+
+Make the firmware with
+
+```sh
+make keebio/iris/rev6:davidpratt512[:flash]
+```
