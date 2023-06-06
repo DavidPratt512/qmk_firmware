@@ -127,7 +127,6 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
         case TAB_CTL:
         case LWR_ENT:
         case RAIS_BS:
-        case ESC_NUM:
             return true;
         default:
             return false;
