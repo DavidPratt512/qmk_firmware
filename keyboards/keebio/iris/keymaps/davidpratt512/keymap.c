@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      _______, KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, DF_QWER,          DF_STRD, _______, KC_PIPE, KC_LABK, KC_RABK, KC_BSLS, _______,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    _______, _______, _______,                   _______, _______,  _______
+                                    _______, _______, _______,                   _______, KC_DEL,  _______
   //                               └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
@@ -169,16 +169,9 @@ const key_override_t colon_semicolon_override = ko_make_basic(
     KC_SCLN          /* send KC_SCLN           */
 );
 
-const key_override_t backspace_delete_override = ko_make_basic(
-    MOD_MASK_SHIFT,  /* When shift is active   */
-    RAIS_BS,         /* and KC_BSPC is pressed */
-    KC_DEL           /* send KC_DEL            */
-);
-
 const key_override_t **key_overrides = (const key_override_t *[]) {
     &comma_paren_override,      /* Use ,/( instead of ,/<  */
     &dot_paren_override,        /* Use ./) instead of ./>  */
     &colon_semicolon_override,  /* Use :/; instead of ;/:  */
-    &backspace_delete_override, /* Send del on shift+bspc  */
     NULL                        /* Must be null-terminated */
 };
