@@ -14,3 +14,14 @@ Other keyboard configs are kept on other branches (in parentheses):
 
 I'm using different branches to effectively pin the version of qmk each board
 is built with.
+
+## GMMK Pro
+
+This is the branch for my **gmmk/pro** configuration. The keymap is in the
+`keyboards/gmmk/pro/rev1/ansi/keymaps/davidpratt512` directory.
+
+Make the firmware with
+
+```sh
+make gmmk/pro/rev1/ansi:davidpratt512[:flash]
+```
