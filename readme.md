@@ -6,6 +6,7 @@ This is my fork of [qmk_firmware](https://github.com/qmk/qmk_firmware).
 
 Other keyboard configs are kept on other branches (in parentheses):
 
+* gmmk/pro/rev1/ansi (gmmk)
 * kbdfans/niu_mini (niu_mini)
 * **keebio/iris** (iris)
 * pauperboards/brick (brick)
