@@ -17,6 +17,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL, KC_LGUI, KC_LALT,                            KC_SPC,                             KC_RALT, MO(1),   KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT
     ),
 
+// These are the keys available when you hold down the 'Mail' key (2nd key right of the spacebar)
+// Don't press the RE-BOOT button. If you do, just unplug the keyboard and plug it back in.
 //      _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
 //      _______, RGB_TOG, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
 //      _______, _______, BRIGHT+, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RE-BOOT,          _______,
