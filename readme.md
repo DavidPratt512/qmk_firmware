@@ -23,4 +23,14 @@ Make the firmware with
 
 ```sh
 make keebio/iris/rev6:davidpratt512[:flash]
+make keebio/iris/rev8:davidpratt512[:flash]  # flash each side separately
+```
+
+## Troubleshooting
+
+The `make` command may fail if the `avr-gcc` version is not compatible with the
+current version of qmk. Change versions of `avr-gcc` with
+
+```sh
+pacman -U "/var/cache/pacman/pkg/avr-gcc-${version}-x86_64.pkg.tar.zst"
 ```
