@@ -168,9 +168,8 @@ const key_override_t colon_semicolon_override = ko_make_basic(
     KC_SCLN          /* send KC_SCLN           */
 );
 
-const key_override_t **key_overrides = (const key_override_t *[]) {
+const key_override_t *key_overrides[] = {
     &comma_paren_override,      /* Use ,/( instead of ,/<  */
     &dot_paren_override,        /* Use ./) instead of ./>  */
     &colon_semicolon_override,  /* Use :/; instead of ;/:  */
-    NULL                        /* Must be null-terminated */
 };
