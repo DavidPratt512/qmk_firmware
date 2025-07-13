@@ -30,6 +30,7 @@ uint16_t COMBO_LEN = COMBO_LENGTH;
 #define DF_QWER DF(L_QWERTY)          /* Set default layer to L_QWERTY               */
 #define TERM_CP C(S(KC_C))            /* Terminal copy (ctrl + shift + c)            */
 #define TERM_PT C(S(KC_V))            /* Terminal paste (ctrl + shift + v)           */
+#define AWE_PRE G(KC_ESC)             /* (awesome) Return to previous tags           */
 
 /* STURDY-specific keycodes */
 #define DF_STRD DF(L_STURDY)          /* Set default layer to L_STURDY               */
@@ -92,7 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      _______, _______, _______, KC_GRV,  KC_TILD, _______, KC_PSCR,          _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  _______, _______,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    _______, KC_LCTL, _______,                   _______, _______, _______
+                                    _______, AWE_PRE, _______,                   _______, _______, _______
   //                               └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
