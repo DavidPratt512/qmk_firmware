@@ -27,16 +27,10 @@ uint16_t COMBO_LEN = COMBO_LENGTH;
 #define GNME_RT G(KC_PGDN)            /* (gnome) Move to next workspace              */
 #define GNME_ML G(S(KC_PGUP))         /* (gnome) Move window to prev workspace       */
 #define GNME_MR G(S(KC_PGDN))         /* (gnome) Move window to next workspace       */
-#define DF_QWER DF(L_QWERTY)          /* Set default layer to L_QWERTY               */
 #define TERM_CP C(S(KC_C))            /* Terminal copy (ctrl + shift + c)            */
 #define TERM_PT C(S(KC_V))            /* Terminal paste (ctrl + shift + v)           */
 #define AWM_PRV G(KC_ESC)             /* (awesome) Return to previous tags           */
 #define AWMT(N) G(C(KC_##N))          /* (awesome) Toggle tag #N                     */
-
-/* STURDY-specific keycodes */
-#define DF_STRD DF(L_STURDY)          /* Set default layer to L_STURDY               */
-#define SLH_CTL RCTL_T(KC_SLSH)       /* Tap for slash, hold for control             */
-
 
 /* ------------------------------------- Layers ------------------------------------ */
 
@@ -56,20 +50,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //                               └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
-  [L_STURDY] = LAYOUT(
-  //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
-     KC_LALT, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                               KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_RALT,
-  //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LGUI, KC_V,    KC_M,    KC_L,    KC_C,    KC_P,                               KC_X,    KC_F,    KC_O,    KC_U,    KC_J,    KC_RGUI,
-  //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     TAB_CTL, KC_S,    KC_T,    KC_R,    KC_D,    KC_Y,                               KC_DOT,  KC_N,    KC_A,    KC_E,    KC_I,    SLH_CTL,
-  //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LSFT, KC_Z,    KC_K,    KC_Q,    KC_G,    KC_W,    KC_VOLD,          KC_VOLU, KC_B,    KC_H,    KC_QUOT, KC_COLN, KC_COMM, KC_RSFT,
-  //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    TERM_CP, ESC_NUM, LWR_ENT,                   KC_SPC,  RAIS_BS, TERM_PT
-  //                               └────────┴────────┴────────┘                 └────────┴────────┴────────┘
-  ),
-
   [L_LOWER] = LAYOUT(
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      _______, _______, _______, _______, _______, _______,                            _______, _______, _______, _______, _______, _______,
@@ -78,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      _______, KC_F5,   KC_F6,   KC_F7,   KC_F8,   _______,                            KC_UNDS, KC_EQL,  KC_LCBR, KC_RCBR, _______, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, DF_QWER,          DF_STRD, _______, KC_PIPE, KC_LABK, KC_RABK, KC_BSLS, _______,
+     _______, KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, _______,          _______, _______, KC_PIPE, KC_LABK, KC_RABK, KC_BSLS, _______,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     _______, _______, _______,                   _______, KC_DEL,  _______
   //                               └────────┴────────┴────────┘                 └────────┴────────┴────────┘
